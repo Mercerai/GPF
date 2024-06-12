@@ -1,0 +1,55 @@
+data:
+  scene_path : ./data/dtu/scan114/
+  points_path: ./data/dtu/scan114/points_voxel_downsampled.ply
+  cam_folder: cams
+  max_dim: 640
+  image_folder: images
+  depth_folder: depth_gt
+  image_extension: .jpg
+  pcd_downsample: 0.5
+  downsample_method: voxel
+
+device_ids:
+- 0
+expname: finetune2
+
+model:
+  K: 8
+  radius: 1000
+  use_viewdirs: True
+  n_valid_src_imgs: 3
+  test_valid_src_imgs: 5
+  multires_dist: 8
+  multires_xyz: 4
+  multires_low_feat: 2
+  multires_high_feat: 2
+  interp_method: attention
+
+training:
+  i_print: 50
+  i_save: 10000
+  i_test_img: 500
+  N_rays: 512
+  sample_on_mask: False
+  num_iters: 100000
+  whitebg: False
+  log_root_dir: logs
+  lr: 0.01
+  weight_decay: 0.
+  w_m: 0.
+  w_d: 0.
+  w_s: 0.
+  rays_chunk: 512
+
+render:
+  depth_interval: 25
+  N_Samples: 16
+  uniform_samples: 64
+
+sample_strategy:
+  train: uniform
+  test: uniform
+
+initial_model: /home/ubuntu/generalization_nerf/Generalizable-Point-based-Nerf/log/new_train_64/ckpts/e000_step034643.tar
+load_pt: False
+eps: 1e-7

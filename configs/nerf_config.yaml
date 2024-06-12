@@ -1,0 +1,65 @@
+data:
+  data_path : ./data/nerf_synthetic
+  test_data_path: ./data/nerf_synthetic
+  point_path: None
+  scene_list: ./nerf_synthetic/training_scene.txt
+  num_workers: 4
+  num_src_views: 10
+  batch_size: 1
+  cam_folder: cams
+  image_folder: images
+  depth_folder: depth_gt
+  image_extension: .png
+  pcd_downsample: -1
+  downsample_method: voxel
+
+device_ids:
+- 0
+expname: nerf_generalization
+
+model:
+  K: 8
+  radius: 100
+  local_pts_num: 8
+  use_viewdirs: True
+  n_valid_src_imgs: 2
+  test_valid_src_imgs: 5
+  multires_dist: 8
+  multires_xyz: 4
+  multires_low_feat: 2
+  multires_high_feat: 2
+  interp_method: attention
+
+training:
+  robust_train: False
+  shuffle: True
+  print_interval: 50
+  save_ep: 1
+  i_test_img: 1000
+  N_rays: 512
+  sample_on_mask: True
+  num_epoch: 10
+  whitebg: False
+  test_specific: ["lego", 3]
+  log_root_dir: logs
+  lr: 0.0005
+  weight_decay: 0.
+  w_m: 0.1
+  w_d: 0.
+  w_s: 0.
+  rays_chunk: 512
+
+render:
+  depth_interval: 25
+  N_Samples: 16
+  uniform_samples: 128
+
+sample_strategy:
+  train: log
+  test: log
+  base: 1.16
+
+load_pt: False
+eps: 1e-7
+checkpoint: None
+

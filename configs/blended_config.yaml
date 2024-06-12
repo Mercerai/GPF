@@ -1,0 +1,65 @@
+data:
+  data_path : ./data/blended_mvs
+  test_data_path: ./data/blended_mvs
+  point_path: None
+  scan_list: ./lists/blended/train.txt
+  test_scan_list: ./lists/blended/test.txt
+  num_workers: 4
+  num_src_views: 10
+  batch_size: 1
+  cam_folder: cams
+  image_folder: images
+  depth_folder: depth_gt
+  image_extension: .jpg
+  pcd_downsample: -1
+  downsample_method: voxel
+
+device_ids:
+- 0
+expname: blended_gen
+
+model:
+  K: 8
+  radius: 1000
+  local_pts_num: 8
+  use_viewdirs: True
+  n_valid_src_imgs: 3
+  test_valid_src_imgs: 3
+  multires_dist: 8
+  multires_xyz: 4
+  multires_low_feat: 2
+  multires_high_feat: 2
+  interp_method: attention
+  sh_degree: 3
+
+training:
+  robust_train: False
+  shuffle: True
+  print_interval: 50
+  save_ep: 1
+  i_test_img: 5000
+  N_rays: 512
+  sample_on_mask: False
+  num_epoch: 10
+  whitebg: False
+  test_specific: None
+  log_root_dir: logs
+  lr: 0.0005
+  weight_decay: 0.
+  w_m: 0.1
+  w_d: 0.
+  w_s: 0.
+  rays_chunk: 1024
+
+render:
+  depth_interval: 25
+  N_Samples: 16
+  uniform_samples: 64
+
+sample_strategy:
+  train: log
+  test: log
+  base: 1.2
+
+eps: 1e-7
+checkpoint: None

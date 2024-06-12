@@ -1,0 +1,65 @@
+data:
+  data_path : ./data/dtu
+  test_data_path: ./data/dtu
+  point_path: None
+  scan_list: ./lists/dtu/train_highres.txt
+  test_scan_list: ./lists/dtu/test.txt
+  num_workers: 4
+  num_src_views: 10
+  batch_size: 1
+  cam_folder: cams
+  image_folder: images
+  depth_folder: depth_gt
+  image_extension: .jpg
+  pcd_downsample: -1
+  downsample_method: voxel
+
+device_ids:
+- 0
+expname: equalpaperv5_base1.2_noises_train
+
+model:
+  K: 8
+  radius: 1000
+  local_pts_num: 8
+  use_viewdirs: True
+  n_valid_src_imgs: 3
+  test_valid_src_imgs: 3
+  multires_dist: 8
+  multires_xyz: 4
+  multires_low_feat: 2
+  multires_high_feat: 2
+  interp_method: attention
+  sh_degree: 3
+
+training:
+  robust_train: False
+  shuffle: True
+  print_interval: 50
+  save_ep: 1
+  i_test_img: 5000
+  N_rays: 512
+  sample_on_mask: False
+  num_epoch: 10
+  whitebg: False
+  test_specific: [105, 3, 25]
+  log_root_dir: logs
+  lr: 0.0005
+  weight_decay: 0.
+  w_m: 0.
+  w_d: 0.
+  w_s: 0.
+  rays_chunk: 1024
+
+render:
+  depth_interval: 25
+  N_Samples: 33
+  uniform_samples: 128
+
+sample_strategy:
+  train: log
+  test: log
+  base: 1.2
+
+eps: 1e-7
+checkpoint: ./log/equalpaperv4_base1.2_noises_train/ckpts/e009_step340000.tar
