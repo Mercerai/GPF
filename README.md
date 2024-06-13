@@ -1,7 +1,7 @@
 # GPF: Learning Robust Generalizable Radiance Field with Visibility and Feature Augmented Point Representation
-![issues](https://img.shields.io/github/issues/Mercerai/GPF)
+<!-- ![issues](https://img.shields.io/github/issues/Mercerai/GPF)
 ![forks](https://img.shields.io/github/forks/Mercerai/GPF?style=flat&color=orange)
-![stars](https://img.shields.io/github/stars/Mercerai/GPF?style=flat&color=red)
+![stars](https://img.shields.io/github/stars/Mercerai/GPF?style=flat&color=red) -->
 
 > [Learning Robust Generalizable Radiance Field with Visibility and Feature Augmented Point Representation](https://iclr.cc/virtual/2024/poster/17836)       
 > Jiaxu Wang, Ziyi Zhang, Renjing Xu*    
