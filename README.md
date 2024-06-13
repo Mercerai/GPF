@@ -11,7 +11,7 @@ If you found this project useful, please give us a star ⭐️ or [cite](#citati
 
 ## Installation
 ```shell
-git clone 
+git clone https://github.com/Mercerai/GPF.git
 cd GPF
 pip install -r requirements.txt
 ```
