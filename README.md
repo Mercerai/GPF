@@ -10,7 +10,7 @@
 
  ![framework_img](figs/framework.png)
 
-If you found this project useful, please give us a star ⭐️ or [cite](#citation) us in your paper, this is the greatest support and encouragement for us.
+If you found this project useful, please [cite](#citation) us in your paper, this is the greatest support for us.
 
 ## Installation
 ```shell
@@ -42,12 +42,12 @@ python test.py --config ./configs/dtu_config --render_path --num_views 15 --inte
 ```shell
 python test.py --scan_num 114 --view_num 36
 ```
---render_path switch on if camera path is rendered
---num_views how many frames will be rendered on the path
---interp_0 and 1 frames between which need to be interpolated
---scan_num the scan number 
---view_num specific view number 
-
+--render_path switch on if camera path is rendered  
+--num_views how many frames will be rendered on the path  
+--interp_0 and 1 frames between which need to be interpolated  
+--scan_num the scan number  
+--view_num specific view number  
+  
 The results will be saved in ./log/dtu_eval/
 ## Acknowledgements
 In this repository, we have used codes or datasets from the following repositories. 
