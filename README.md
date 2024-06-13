@@ -3,7 +3,10 @@
 ![forks](https://img.shields.io/github/forks/Mercerai/GPF?style=flat&color=orange)
 ![stars](https://img.shields.io/github/stars/Mercerai/GPF?style=flat&color=red)
 
-PyTorch implementation of paper "[Learning Robust Generalizable Radiance Field with Visibility and Feature Augmented Point Representation](https://iclr.cc/virtual/2024/poster/17836)", ICLR 2024.
+> [Learning Robust Generalizable Radiance Field with Visibility and Feature Augmented Point Representation](https://iclr.cc/virtual/2024/poster/17836)       
+> Jiaxu Wang, Ziyi Zhang, Renjing Xu*    
+> ICLR 2024
+> 
 
  ![framework_img](figs/framework.png)
 
