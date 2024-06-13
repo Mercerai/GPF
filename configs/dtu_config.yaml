@@ -16,7 +16,7 @@ data:
 
 device_ids:
 - 0
-expname: equalpaperv5_base1.2_noises_train
+expname: dtu_gen
 
 model:
   K: 8
@@ -53,7 +53,7 @@ training:
 
 render:
   depth_interval: 25
-  N_Samples: 33
+  N_Samples: 17
   uniform_samples: 128
 
 sample_strategy:

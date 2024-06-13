@@ -50,6 +50,6 @@ sample_strategy:
   train: uniform
   test: uniform
 
-initial_model: /home/ubuntu/generalization_nerf/Generalizable-Point-based-Nerf/log/new_train_64/ckpts/e000_step034643.tar
+initial_model: 
 load_pt: False
 eps: 1e-7

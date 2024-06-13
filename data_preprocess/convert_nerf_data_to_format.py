@@ -19,17 +19,9 @@ def collate_points_and_imgs(meshes_path, data_path):
         print(f" =================== processing ======================= {scene}")
         mesh_path = os.path.join(meshes_path, scene + ".ply")
         mesh = o3d.io.read_triangle_mesh(mesh_path)
-        points = mesh.sample_points_uniformly(15000000)
+        points = mesh.sample_points_uniformly(300000)
         point_path = os.path.join(data_path, scene, "points.ply")
         o3d.io.write_point_cloud(point_path, points)
-
-        # image_path = os.path.join(data_path, scene, "images")
-        # test_path = os.path.join(data_path, scene, "test")
-        # os.makedirs(image_path, exist_ok=True)
-        #
-        # for i in range(200):
-        #     src_img_path = os.path.join(test_path, "r_{:d}.png".format(i))
-        #     shutil.copy(src_img_path, image_path)
 
 def convert_image_alpha_to_image(data_path):
     scene_list = os.path.join(data_path, "training_scene.txt")
@@ -85,10 +77,4 @@ def gen_depths_and_masks(data_path):
             save_map(os.path.join(depth_folder, "r_{:d}.pfm".format(idx)), depth)
             mask = (depth > 1e-5)
             save_image(os.path.join(mask_folder, "r_{:d}.png".format(idx)), mask)
-
-
-if __name__ == "__main__":
-    collate_points_and_imgs(r"/home/share/jx/nerf_ply/", r"/home/share/jx/nerf_synthetic_high_density_points/")
-    gen_depths_and_masks(r"/home/share/jx/nerf_synthetic_high_density_points/")
-    # convert_image_alpha_to_image(r"/home/share/jx/nerf_synthetic/")
 
