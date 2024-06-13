@@ -36,8 +36,8 @@ pip install -r requirements.txt
 3. Organize datasets and models as follows
 
 ## Pretrained models
-1.Download pretrained model:[GPF]()     
-2.Download finetuned  models:[DTU]()
+1.Download pretrained model: [GPF](https://github.com/Mercerai/GPF/blob/master/log/dtu_check/ckpts/final.tar)     
+2.Download finetuned  models: [DTU]()
 
 ## Training
 ```shell
