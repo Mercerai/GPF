@@ -2,8 +2,8 @@ data:
   data_path : ./data/dtu
   test_data_path: ./data/dtu
   point_path: None
-  scan_list: ./lists/dtu/train_highres.txt
-  test_scan_list: ./lists/dtu/test.txt
+  scan_list: ./lists/dtu/demo.txt
+  test_scan_list: ./lists/dtu/demo.txt
   num_workers: 4
   num_src_views: 10
   batch_size: 1
@@ -16,7 +16,7 @@ data:
 
 device_ids:
 - 0
-expname: dtu_gen
+expname: dtu_eval
 
 model:
   K: 8
@@ -53,7 +53,7 @@ training:
 
 render:
   depth_interval: 25
-  N_Samples: 17
+  N_Samples: 33
   uniform_samples: 128
 
 sample_strategy:
@@ -62,4 +62,4 @@ sample_strategy:
   base: 1.2
 
 eps: 1e-7
-checkpoint: ./log/equalpaperv4_base1.2_noises_train/ckpts/e009_step340000.tar
+checkpoint: ./log/dtu_check/ckpts/final.tar
