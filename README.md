@@ -3,7 +3,7 @@
 ![forks](https://img.shields.io/github/forks/Mercerai/GPF?style=flat&color=orange)
 ![stars](https://img.shields.io/github/stars/Mercerai/GPF?style=flat&color=red)
 
-PyTorch implementation of paper "[Learning Robust Generalizable Radiance Field with Visibility and Feature Augmented Point Representation](https://ui.adsabs.harvard.edu/abs/2024arXiv240114354W/abstract)", ICLR 2024.
+PyTorch implementation of paper "[Learning Robust Generalizable Radiance Field with Visibility and Feature Augmented Point Representation](https://iclr.cc/virtual/2024/poster/17836)", ICLR 2024.
 
  ![framework_img](figs/framework.png)
 
@@ -64,3 +64,13 @@ We thank all the authors for sharing great codes or datasets.
 - [DTU](https://roboimagedata.compute.dtu.dk/?page_id=36)
 - [BlendedMVS](https://github.com/YoYo000/BlendedMVS)
 
+## Citation
+```
+@inproceedings{jiaxu2023learning,
+  title={Learning Robust Generalizable Radiance Field with Visibility and Feature Augmented Point Representation},
+  author={Jiaxu, WANG and Zhang, Ziyi and Xu, Renjing},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2024}
+}
+
+```
