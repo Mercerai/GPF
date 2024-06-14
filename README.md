@@ -28,7 +28,7 @@ pip install -r requirements.txt
 </details>
 
 ## Dataset
-We reorganize the original datasets in our own format. Here we provide a demonstration of the test set of DTU, which can be downloaded here. After placing the demo data into the data directory, one can directly run the test code as follows. In the data_preprocess dir, we provide the code to reorganize the original datasets into our format. 
+We reorganize the original datasets in our own format. Here we provide a demonstration of the test set of DTU, which can be downloaded [here](https://1drv.ms/f/s!AgLPOioSlHF0hQ6CIDXjbRw9t1Rr?e=He9RhN). After placing the demo data into the data directory, one can directly run the test code as follows. In the data_preprocess dir, we provide the code to reorganize the original datasets into our format. 
 
 ## Pretrained models    
 We provide the pretrained model which can be applied to the DTU and BlendedMVS datasets. 
